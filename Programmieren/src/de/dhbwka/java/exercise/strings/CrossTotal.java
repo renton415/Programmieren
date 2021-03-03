@@ -9,7 +9,7 @@ public class CrossTotal {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Bitte Zahl für Quersumme eingeben: ");
+		System.out.println("Bitte Zahl fï¿½r Quersumme eingeben: ");
 		String str = new String(scan.next());
 		int len = str.length();
 		System.out.println(len);
@@ -18,7 +18,7 @@ public class CrossTotal {
 			sum += Integer.parseInt(str.substring(i, i+1));
 		}
 		System.out.println("Summe: "+sum);
-
+		scan.close();
 	}
 
 }

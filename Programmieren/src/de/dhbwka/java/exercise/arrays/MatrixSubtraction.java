@@ -41,7 +41,7 @@ public class MatrixSubtraction {
 			}
 			System.out.print("\n");
 		}
-
+		scan.close();
 	}
 
 }

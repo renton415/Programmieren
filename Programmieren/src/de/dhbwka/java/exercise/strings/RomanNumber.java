@@ -14,9 +14,9 @@ public class RomanNumber {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Bitte geben Sie eine röm. Zahl ein: ");
-		String str = new String(scan.next());
-		
+		System.out.println("Bitte geben Sie eine rï¿½m. Zahl ein: ");
+		//String str = new String(scan.next());
+		scan.close();
 		
 	}
 

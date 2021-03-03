@@ -14,8 +14,8 @@ public class Eratostenes {
 		{
 			sieve[i] = true;
 		}
-		int[] primes = new int[limit - 1];
-
+		//int[] primes = new int[limit - 1];
+		scan.close();
 	}
 
 }

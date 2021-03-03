@@ -24,6 +24,7 @@ public class Main {
 		} while (nimmspiel.checkGame());
 		System.out.println("Spiel beendet.");
 		System.out.println("Gewonnen hat Spieler " + (nimmspiel.isReihenfolge() ? "Alf" : "Ben"));
+		scan.close();
 	}
 
 }

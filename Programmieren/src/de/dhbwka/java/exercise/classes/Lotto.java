@@ -1,6 +1,6 @@
 package de.dhbwka.java.exercise.classes;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Lotto {
 	
@@ -32,11 +32,11 @@ public class Lotto {
 		boolean eingabefehler;
 		for (int i = 0; i < m;i++) {
 			do {
-				System.out.println("Geben Sie bitte Ihren Tipp für die " + (i + 1) + ". Zahl ein: ");
+				System.out.println("Geben Sie bitte Ihren Tipp fï¿½r die " + (i + 1) + ". Zahl ein: ");
 				eingabefehler = false;
 				tipps[i] = scan.nextInt();
 				if (tipps[i] < 1 || tipps[i] > n) {
-					System.out.println("Eingabefehler: Zahl zu groß oder zu klein");
+					System.out.println("Eingabefehler: Zahl zu groï¿½ oder zu klein");
 					eingabefehler = true;
 				}
 				for (int k = 0; k<i;k++) {

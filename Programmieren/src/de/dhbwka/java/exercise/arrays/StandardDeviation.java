@@ -24,6 +24,7 @@ public class StandardDeviation
 		}
 		double sd = Math.sqrt(sum2/(n-1));
 		System.out.println("Standardabweichung: "+sd);
+		scan.close();
 		
 	}
 }
