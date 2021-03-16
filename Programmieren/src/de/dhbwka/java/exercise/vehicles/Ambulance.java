@@ -19,12 +19,12 @@ public class Ambulance extends Car{
         sirene = false;
     }
     public String toString(){
-        super.toString();
-        return "Ambulance" + super.toString() + " Sirene " + sirene;
+        
+        return super.toString()+ ". Sirene " + sirene;
     }
 
     Ambulance(double speed, boolean sirene) {
-        setSpeed(speed);
+        super(speed);
         this.sirene = sirene;
     }
 }

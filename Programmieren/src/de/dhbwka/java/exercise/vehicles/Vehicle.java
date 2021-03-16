@@ -1,19 +1,33 @@
 package de.dhbwka.java.exercise.vehicles;
 
 public class Vehicle {
-    private int wheels = 0;
-    private int maxSpeed = 0;
-    private int position = 0;
-    private int speed;
+    private int wheels;
+    private double maxSpeed;
+    private double position;
+    protected double speed;
+
+    public Vehicle(){
+        this(0.0);
+    }
+    public Vehicle(double speed){
+        this(0, speed, 0.0, 0);
+    }
+    public Vehicle(int wheels, double speed, double maxSpeed, double position){
+        this.wheels = wheels;
+        setSpeed(speed);
+        this.maxSpeed = maxSpeed;
+        this.position = position;
+    }
 
     void setSpeed(double speed) {
-        if (speed > maxSpeed) {
+        /*if (speed > maxSpeed) {
             this.speed = maxSpeed;
-        } else if (speed < 0) {
-            this.speed = 0;
+        } else if (speed < 0.0) {
+            this.speed = 0.0;
         } else {
-            this.speed = (int)speed;
-        }
+            this.speed = speed;
+        }*/
+        this.speed = 300.0;
     }
 
     void drive (double minutes) {
@@ -22,7 +36,7 @@ public class Vehicle {
         }
     }
     public String toString(){
-        return this.getClass().getSimpleName() + "with "+wheels+" wheels at speed "+speed+"km/h of max" + maxSpeed +" km/h";
+        return this.getClass().getSimpleName() + " with ";
     }
 
 }

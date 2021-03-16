@@ -2,12 +2,13 @@ package de.dhbwka.java.exercise.vehicles;
 
 public class Bicycle extends Vehicle{
     int wheels = 2;
-    int maxSpeed = 30;
+    double maxSpeed = 30;
 
     Bicycle(double speed) {
-        setSpeed(speed);
+        //setSpeed(speed);
+        this.speed = speed;
     }
     public String toString(){
-        return "Bicycle" + super.toString();
+        return super.toString()+ wheels+" wheels at speed "+speed+" km/h of max " + maxSpeed +" km/h";
     }
 }
