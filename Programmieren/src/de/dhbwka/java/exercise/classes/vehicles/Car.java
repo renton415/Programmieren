@@ -1,4 +1,4 @@
-package de.dhbwka.java.exercise.vehicles;
+package de.dhbwka.java.classes.vehicles;
 
 public class Car extends Vehicle{
     int wheels = 4;

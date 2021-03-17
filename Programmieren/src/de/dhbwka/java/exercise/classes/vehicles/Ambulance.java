@@ -1,4 +1,4 @@
-package de.dhbwka.java.exercise.vehicles;
+package de.dhbwka.java.exercise.classes.vehicles;
 
 public class Ambulance extends Car{
     private boolean sirene = false;
