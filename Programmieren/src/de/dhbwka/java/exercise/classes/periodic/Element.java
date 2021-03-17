@@ -4,7 +4,7 @@ public class Element {
     String name;
     String symbol;
     int ordinal;
-    char shell;
+    String shell;
     int phase;
     boolean group;
 
@@ -16,7 +16,7 @@ public class Element {
         this.group = false;
     }
 
-    Element(String name, String symbol, int ordinal, char shell, int phase, boolean group) {
+    public Element(String name, String symbol, int ordinal, String shell, int phase, boolean group) {
         this.name = name;
         this.symbol = symbol;
         this.ordinal = ordinal;
@@ -36,8 +36,8 @@ public class Element {
 
     public String toString(){
         String text = new String();
-        text += name+" ("+symbol+","+ordinal+" Schale: "+shell+", ";
-        if (phase == 0) {
+        text += name+" ("+symbol+","+ordinal+") Schale: "+shell+", ";
+        if (phase == 1) {
             text +="fest";
         } else if (phase == 2){
             text += "fluessig";
@@ -68,10 +68,10 @@ public class Element {
     public void setOrdinal(int ordinal){
         this.ordinal = ordinal;
     }
-    public char getShell(){
+    public String getShell(){
         return shell;
     }
-    public void setShell(char shell){
+    public void setShell(String shell){
         this.shell = shell;
     }
     public int getPhase(){
