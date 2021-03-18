@@ -1,4 +1,4 @@
-package de.dhbwka.java.classes.vehicles;
+package de.dhbwka.java.exercise.classes.vehicles;
 
 public class Race {
 

@@ -3,13 +3,10 @@ package de.dhbwka.java.exercise.strings;
 import java.util.Scanner;
 
 public class CrossTotal {
-	
-	//Scanner scan = new Scanner(System.in);
-	String input = "";
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Bitte Zahl f�r Quersumme eingeben: ");
+		System.out.println("Bitte Zahl fuer Quersumme eingeben: ");
 		String str = new String(scan.next());
 		int len = str.length();
 		System.out.println(len);

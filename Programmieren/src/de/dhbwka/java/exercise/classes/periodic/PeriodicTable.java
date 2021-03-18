@@ -1,6 +1,4 @@
 package de.dhbwka.java.exercise.classes.periodic;
-
-import de.dhbwka.java.exercise.classes.periodic.Element;
 public class PeriodicTable {
     Element[] elements = new Element[119];
 
