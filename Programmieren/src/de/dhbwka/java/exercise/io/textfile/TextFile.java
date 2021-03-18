@@ -4,7 +4,7 @@ import java.io.File;
 
 public class TextFile {
 
-    public Textfile(File f) {
+    public TextFile(File f) {
         
     }
     public TextFile(String pathname) {
