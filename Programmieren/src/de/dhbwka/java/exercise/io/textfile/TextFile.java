@@ -25,5 +25,13 @@ public class TextFile {
     String getLine(int i) {
 
     }
-    void setLine(int i, String s)
+    void setLine(int i, String s) {
+
+    }
+    void replaceAll(String regexp, String ersatz) {
+
+    }
+    void close() {
+        
+    }
 }
