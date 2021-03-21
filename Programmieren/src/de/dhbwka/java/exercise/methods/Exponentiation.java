@@ -7,8 +7,6 @@ public class Exponentiation {
 	double base;
 	int exp;
 	
-	
-
 	public void setBase(double base) {
 		this.base = base;
 	}
