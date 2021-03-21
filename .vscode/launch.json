@@ -1,0 +1,208 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch TextfileViewer",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.TextfileViewer",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Exponentiation",
+            "request": "launch",
+            "mainClass": "Exponentiation",
+            "projectName": "Programmieren_12866e7b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "Programmieren_12866e7b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Quicksort",
+            "request": "launch",
+            "mainClass": "Quicksort",
+            "projectName": "Programmieren_12866e7b"
+        },
+        {
+            "type": "java",
+            "name": "Launch BubbleSort",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.BubbleSort",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch DotProduct",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.DotProduct",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Eratostenes",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.Eratostenes",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci(1)",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.Fibonacci",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch MatrixSubtraction",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.MatrixSubtraction",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Norm",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.Norm",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pascal",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.Pascal",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch StandardDeviation",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.arrays.StandardDeviation",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lotto",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.classes.Lotto",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.classes.Main",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch PeriodicTable",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.classes.periodic.PeriodicTable",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Race",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.classes.vehicles.Race",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch CrossTotalFile",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.io.CrossTotalFile",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Files",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.io.Files",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromeFile",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.io.PalindromeFile",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch TextfileLines",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.io.TextfileLines",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Exponentiation(1)",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.methods.Exponentiation",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci(2)",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.methods.Fibonacci",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch Quicksort(1)",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.methods.Quicksort",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch CrossTotal",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.strings.CrossTotal",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch RomanNumber",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.strings.RomanNumber",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch ComponentFrame",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.ComponentFrame",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch TextFrame",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.TextFrame",
+            "projectName": "Programmieren",
+            "args": [
+                "palindrome.txt",
+                800,
+                800
+            ]
+        }
+    ]
+}

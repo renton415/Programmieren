@@ -1,0 +1,2 @@
+Quersumme von 256 ist 13
+Quersumme von 654654616 ist 43

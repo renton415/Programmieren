@@ -60,7 +60,7 @@ public class TextFile {
             return 0;
         }
     }
-    String[] getLines() {
+    public String[] getLines() {
         return buffer;
     }
     String getLine(int i) throws LineNumberOutOfBoundsException{
