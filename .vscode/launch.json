@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CurrencyCalculator",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.CurrencyCalculator",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch TextfileViewer",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.TextfileViewer",
@@ -199,8 +206,8 @@
             "mainClass": "de.dhbwka.java.exercise.ui.TextFrame",
             "projectName": "Programmieren",
             "args": [
-                "palindrome.txt",
-                800,
+                "beispiel.txt",
+                400,
                 800
             ]
         }
