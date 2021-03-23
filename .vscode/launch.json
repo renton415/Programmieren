@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Editor",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.Editor",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch CurrencyCalculator",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.CurrencyCalculator",
