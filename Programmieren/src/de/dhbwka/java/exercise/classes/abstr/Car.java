@@ -14,4 +14,7 @@ public class Car extends Vehicle{
     public String toString(){
         return super.toString()+ wheels+" wheels at speed "+speed+" km/h of max " + maxSpeed +" km/h";
     }
+    public void info(){
+        this.toString();
+    }
 }

@@ -35,6 +35,9 @@ public abstract class Vehicle {
             position += minutes/60 * speed; 
         }
     }
+
+    public abstract void info();
+    
     public String toString(){
         return this.getClass().getSimpleName() + " with ";
     }
