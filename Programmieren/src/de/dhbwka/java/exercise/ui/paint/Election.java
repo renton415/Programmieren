@@ -19,6 +19,8 @@ public class Election extends JComponent{
 
         g.setColor(Color.red);
         g.fillRect(COLUMN_WIDTH + 2* COLUMN_DIST, 100, COLUMN_WIDTH, 150);
+
+        
     }
     public static void main(String[] args) {
         JFrame f = new JFrame();
