@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Election",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.paint.Election",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch BMICalculator",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.event.BMICalculator",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch Editor",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.Editor",
