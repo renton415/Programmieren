@@ -2,11 +2,13 @@ package de.dhbwka.java.exercise.ui.event;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 @SuppressWarnings("serial")
-public class BMICalculator extends JFrame {
+public class BMICalculator extends JFrame implements ActionListener{
 
+    JTextField height = new JTextField("");
+    JTextField weight = new JTextField("");
     ButtonGroup gender = new ButtonGroup();
     JRadioButton male = new JRadioButton("maennlich");
     JRadioButton female = new JRadioButton("weiblich");
@@ -18,9 +20,17 @@ public class BMICalculator extends JFrame {
 
     public double calculateBmi(double weight, double height){
         if (weight > 0 && height > 0) {
-            return (weight/height*height);
+            return (weight/(height*height));
         } else {
             return 0.0;
+        }
+    }
+
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource() == berechnen) {
+            double bmi = calculateBmi(Double.parseDouble(weight.getText()), Double.parseDouble(height.getText()));
+            bmiResult.setText(String.valueOf(bmi));
+            classification.setText(getClassification(bmi, male.isEnabled()));
         }
     }
 
@@ -76,10 +86,10 @@ public class BMICalculator extends JFrame {
         top.setLayout(new GridLayout(2,2,2,2));
 
         top.add(new JLabel("Gewicht in kg:"));
-        top.add(new JTextField(""));
+        top.add(weight);
 
         top.add(new JLabel("Groesse in m:"));
-        top.add(new JTextField(""));
+        top.add(height);
 
         this.add(top);
 
@@ -93,6 +103,7 @@ public class BMICalculator extends JFrame {
         mid.add(male);
         mid.add(female);
 
+        berechnen.addActionListener(this);
         mid.add(berechnen);
 
         this.add(mid, BorderLayout.CENTER);
