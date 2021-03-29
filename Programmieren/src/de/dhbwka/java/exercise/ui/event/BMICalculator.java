@@ -14,8 +14,8 @@ public class BMICalculator extends JFrame implements ActionListener{
     JRadioButton female = new JRadioButton("weiblich");
     JPanel bottom = new JPanel();
     JLabel bmiLabel = new JLabel("BMI:");
-    JTextField bmiResult = new JTextField("");
-    JTextField classification = new JTextField("");
+    JTextField bmiResult = new JTextField("",20);
+    JTextField classification = new JTextField("",20);
     JButton berechnen = new JButton("berechne");
 
     public double calculateBmi(double weight, double height){

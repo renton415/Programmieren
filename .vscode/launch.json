@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch NumberGuess",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.event.NumberGuess",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
+            "name": "Launch CurrencyCalculator",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.event.CurrencyCalculator",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch Election",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.paint.Election",
