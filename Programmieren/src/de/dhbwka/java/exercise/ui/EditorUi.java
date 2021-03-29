@@ -6,7 +6,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 @SuppressWarnings("serial")
-public class Editor extends JFrame{
+public class EditorUi extends JFrame{
     JMenu datei = new JMenu("Datei");
     JMenu bearbeiten = new JMenu("Bearbeiten");
     JMenu sendenAn = new JMenu("Senden An");
@@ -38,7 +38,7 @@ public class Editor extends JFrame{
 
 
 
-    public Editor(String title) {
+    public EditorUi(String title) {
         super(title);
         JMenuBar menubar= new JMenuBar();
         this.setJMenuBar(menubar);
@@ -90,6 +90,6 @@ public class Editor extends JFrame{
     }
     
     public static void main (String[] args) {
-        new Editor("Editor");
+        new EditorUi("Editor");
     }
 }

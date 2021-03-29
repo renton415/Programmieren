@@ -16,7 +16,6 @@ public class Lottery {
 		boolean schonGezogen;
 		for (int i = 0; i < m;i++) {
 			do {
-				gezogeneZahlen.add((int) (Math.random() * 7 + 1))
 				
 			} while (gezogeneZahlen.size() < 7);
 		}

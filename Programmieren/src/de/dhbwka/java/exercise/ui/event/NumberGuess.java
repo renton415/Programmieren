@@ -1,6 +1,9 @@
 package de.dhbwka.java.exercise.ui.event;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.FileReader;
 import java.awt.*;
 
 public class NumberGuess extends JFrame implements ActionListener {
@@ -8,6 +11,8 @@ public class NumberGuess extends JFrame implements ActionListener {
     int limit = 1000;
     int rand;
     int trys = 0;
+    String resultFile = "results.txt";
+
     JPanel p1 = new JPanel(); 
     JPanel p2 = new JPanel(); 
     JPanel p3 = new JPanel();
@@ -28,13 +33,11 @@ public class NumberGuess extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == newGameBtn) {
-            trys = 0;
-            rand = (int) (Math.random() *1000);
+            initNewGame();
             resultField.setText("Neues Spiel!");
         }else if (e.getSource() == okBtn) {
             trys++;
-            int numGuess = Integer.parseInt(numberGuess.getText());
-            resultField.setText("Versuch Nr. "+trys+": "+numGuess+" ist "+isNumberCorrect(numGuess));
+            evaluatGuess(Integer.parseInt(numberGuess.getText()));
         }else if (e.getSource() == bestBtn) {
             
         }else if (e.getSource() == exitBtn) {
@@ -42,25 +45,45 @@ public class NumberGuess extends JFrame implements ActionListener {
         }
     }
 
-    public String isNumberCorrect(int in) {
+    public void evaluatGuess(int in) {
         if (in > rand) {
-            return "zu hoch!";
+            resultField.setText("Versuch Nr. "+trys+": "+in+" ist zu zu hoch!");
         } else if (in < rand) {
-            return "zu niedrig!";
+            resultField.setText("Versuch Nr. "+trys+": "+in+" ist zu niedrig!");
         } else {
-            return "richtig!";
+            write();
+            resultField.setText("Versuch Nr. "+trys+": "+in+" ist richtig! Neues Spiel!");
+            initNewGame();
         }
     }
 
-    public void write(){
-        
+    public void initNewGame() {
+        trys = 0;
+        rand = (int) (Math.random() *1000);
     }
 
+    public void write(){
+        try { 
+            FileWriter f = new FileWriter(resultFile, true);
+            f.write(name.getText() + " " + trys + " Versuche\n"); 
+            f.close(); 
+        } catch (Exception e) { 
+        } 
+    }
+
+    public void read(){
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(resultFile));
+            
+        } catch (Exception e){
+            
+        }
+    }
     NumberGuess(){
         super("Ratespiel");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(4, 1));
-        rand = (int) (Math.random() *1000);
+        initNewGame();
 
         newGameBtn.addActionListener(this);
         okBtn.addActionListener(this);
