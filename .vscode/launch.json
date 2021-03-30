@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Editor",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.ui.editor.Editor",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch NumberGuess",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.event.NumberGuess",
