@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -67,7 +68,10 @@ public class Editor extends JFrame implements ActionListener{
         } else if (e.getSource() == speichern) {
             saveFile();
         } else if (e.getSource() == beenden) {
-
+            int state = JOptionPane.showConfirmDialog(null, "Editor beenden?");
+            if(state == JOptionPane.OK_OPTION) {
+                System.exit(0);
+            }
         }
     }
     private void openFile() {
@@ -157,6 +161,7 @@ public class Editor extends JFrame implements ActionListener{
         sendenAn.add("Microsoft Powerpoint");
 
         datei.add(neu);
+        neu.addActionListener(this);
         datei.add(oeffnen);
         oeffnen.addActionListener(this);
         datei.addSeparator();
