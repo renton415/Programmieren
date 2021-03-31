@@ -3,16 +3,26 @@ package de.dhbwka.java.exercise.collections;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import java.awt.event.*;
-import java.util.Set;
-import java.util.TreeSet;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.awt.GridLayout;
 
 @SuppressWarnings("serial")
 public class Library extends JFrame implements ActionListener{
+
+    private static final String[] orderCriteria = { "Titel", "Autor", "Jahr", "Verlag" }; 
+    private String filename = "books.txt";
 
     JPanel p1 = new JPanel(); 
     JPanel p2 = new JPanel(); 
@@ -34,11 +44,11 @@ public class Library extends JFrame implements ActionListener{
     JButton yearBtn = new JButton("Jahr");
     JButton publisherBtn = new JButton("Verlag");
 
-    Set<Book> numbers = new TreeSet<>();
+    private List<Book> books = new ArrayList<>();
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == saveBtn) {
-
+            books.add(new Book(titleField.getText(), authorField.getText(), Integer.parseInt(yearField.getText()), publisherField.getText()));
         } else if (e.getSource() == titleBtn)  {
 
         } else if (e.getSource() == authorBtn) {
@@ -52,6 +62,7 @@ public class Library extends JFrame implements ActionListener{
 
     Library() {
         super("Library");
+        loadBooks();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridLayout(3, 1));
         //this.setLayout(new BorderLayout());
@@ -95,6 +106,44 @@ public class Library extends JFrame implements ActionListener{
         this.setSize(500, 300);
         this.setVisible(true);
     }
+
+    public void saveBooks(String title, String author, int year, String publisher) { 
+        Book book = new Book(title, author, year, publisher); 
+        books.add(book); 
+        try (PrintWriter pw = new PrintWriter(new FileWriter(new File(filename), true));) { 
+            pw.println(book); // uses toString of Book 
+        } catch (Exception ex) { 
+        System.err.println("Fehler beim Schreiben: " + ex.getLocalizedMessage()); 
+        } 
+    } 
+
+    public void loadBooks() {
+        try (BufferedReader br = new BufferedReader(new FileReader( new File(filename)));) { 
+            while (br.ready()) { 
+                String[] parts = br.readLine().split(";"); 
+                if (parts.length == 4) 
+                books.add(new Book(parts[0], parts[1], new Integer(parts[2]), parts[3])); 
+            } 
+        } catch (Exception ex) { 
+        System.err.println("Fehler beim Lesen: " +  
+               ex.getLocalizedMessage());
+        } 
+    }
+    public void sort(int order) { 
+        Collections.sort(books, new BookComparator(order)); 
+        JOptionPane.showMessageDialog(this, this, // uses toString()  
+            "Bestand sortiert nach " + orderCriteria[order], 
+                              JOptionPane.INFORMATION_MESSAGE); 
+      } 
+     
+      /** All books as a single String */ 
+      @Override 
+      public String toString() { 
+        StringBuffer output = new StringBuffer(""); 
+        for (Book book : books) 
+          output.append(book + System.lineSeparator()); 
+        return output.toString(); 
+      };
     public static void main(String[] args) {
         new Library();
     }
