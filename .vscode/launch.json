@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Library",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.collections.Library",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch ShellGame",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.ui.event.ShellGame",
