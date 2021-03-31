@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Months",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.enums.Months",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch Library",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.collections.Library",
