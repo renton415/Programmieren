@@ -137,13 +137,13 @@ public class Library extends JFrame implements ActionListener{
       } 
      
       /** All books as a single String */ 
-      @Override 
-      public String toString() { 
+    @Override 
+    public String toString() { 
         StringBuffer output = new StringBuffer(""); 
         for (Book book : books) 
           output.append(book + System.lineSeparator()); 
         return output.toString(); 
-      };
+    }
     public static void main(String[] args) {
         new Library();
     }

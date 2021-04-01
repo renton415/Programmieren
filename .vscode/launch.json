@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestGame",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.enums.cards.TestGame",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch Months",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.enums.Months",
