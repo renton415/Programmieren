@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SearchEngine",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.threads.search.SearchEngine",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch BufferTest",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.threads.buffer.BufferTest",
