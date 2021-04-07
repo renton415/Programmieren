@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TrafficLight",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.threads.TrafficLight",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch DancingText",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.threads.DancingText",
