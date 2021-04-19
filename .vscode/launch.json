@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Gazetteer",
+            "request": "launch",
+            "mainClass": "de.dhbwka.java.exercise.xml.Gazetteer",
+            "projectName": "Programmieren"
+        },
+        {
+            "type": "java",
             "name": "Launch SearchEngine",
             "request": "launch",
             "mainClass": "de.dhbwka.java.exercise.threads.search.SearchEngine",
